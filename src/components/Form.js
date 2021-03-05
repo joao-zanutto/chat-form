@@ -29,6 +29,7 @@ const Form = () => {
 			{ sender: robot, text: receiving },
 		];
 		setMessageList(tempList);
+		window.scrollTo(0, document.body.scrollHeight);
 	};
 
 	const send = (step) => {
@@ -49,6 +50,11 @@ const Form = () => {
 
 	return (
 		<form
+			style={{
+				backgroundColor: '#19DFA5',
+				display: 'flex',
+				flexDirection: 'column',
+			}}
 			onSubmit={(e) => {
 				e.preventDefault();
 			}}>
@@ -60,7 +66,6 @@ const Form = () => {
 				values={formik.values}
 				send={send}
 			/>
-			<span> {JSON.stringify(formik.values, null, 2)} </span>
 		</form>
 	);
 };

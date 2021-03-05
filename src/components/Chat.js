@@ -3,7 +3,8 @@ import Message from './Message';
 const styles = {
 	chat: {
 		padding: 20,
-		backgroundColor: 'grey',
+		display: 'flex',
+		flexDirection: 'column',
 	},
 };
 

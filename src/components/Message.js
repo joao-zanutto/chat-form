@@ -9,6 +9,9 @@ const styles = {
 		margin: 15,
 		borderRadius: 30,
 		borderTopLeftRadius: 0,
+		maxWidth: 800,
+		minWidth: 300,
+		boxShadow: '1px 3px 1px #9E9E9E',
 	},
 	userBaloon: {
 		backgroundColor: 'white',
@@ -16,8 +19,12 @@ const styles = {
 		paddingRight: 30,
 		margin: 15,
 		borderRadius: 30,
-		textAlign: 'right',
 		borderTopRightRadius: 0,
+		minWidth: 300,
+		maxWidth: 800,
+		float: 'right',
+		textAlign: 'right',
+		boxShadow: '1px 3px 1px #9E9E9E',
 	},
 	header: {
 		marginTop: 5,
@@ -27,10 +34,14 @@ const styles = {
 
 const Message = ({ message }) => {
 	return (
-		<div
-			style={message.sender === robot ? styles.robotBaloon : styles.userBaloon}>
-			<h4 style={styles.header}>{message.sender}</h4>
-			<span> {message.text} </span>
+		<div style={{ width: '100%' }}>
+			<div
+				style={
+					message.sender === robot ? styles.robotBaloon : styles.userBaloon
+				}>
+				<h4 style={styles.header}>{message.sender}</h4>
+				<span> {message.text} </span>
+			</div>
 		</div>
 	);
 };

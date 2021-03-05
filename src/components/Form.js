@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import Chat from './Chat';
 import UserInput from './UserInput';
-import { initialChat, initialValues, properties, robot, schema } from '../defaults';
+import {
+	initialChat,
+	initialValues,
+	properties,
+	robot,
+	schema,
+} from '../defaults';
 
 const Form = () => {
 	const [lastErrorMessage, setLastErrorMessage] = useState();

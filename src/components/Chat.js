@@ -1,19 +1,17 @@
-import React from 'react';
-import { robot } from '../defaults';
+import Message from './Message';
+
+const styles = {
+	chat: {
+		padding: 20,
+		backgroundColor: 'grey',
+	},
+};
 
 const Chat = ({ messageList }) => {
 	return (
-		<div>
+		<div style={styles.chat}>
 			{messageList.map((message) => {
-				if (message.sender === robot) {
-					return (
-						<h4>
-							{message.sender}: {message.text}
-						</h4>
-					);
-				} else {
-					return <h4 style={{ textAlign: 'right' }}> {message.text} </h4>;
-				}
+				return <Message message={message} />;
 			})}
 		</div>
 	);

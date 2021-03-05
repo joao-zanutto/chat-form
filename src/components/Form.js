@@ -1,55 +1,13 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import * as yup from 'yup';
 import Chat from './Chat';
 import UserInput from './UserInput';
-
-const initialValues = {
-	firstName: '',
-	lastName: '',
-	state: '',
-	city: '',
-	birthDate: '',
-	email: '',
-	rating: '',
-};
-
-let errorMessages = {
-	firstName: {
-		required: 'Mas como eu vou conseguir te ajudar se não souber seu nome?',
-	},
-	lastName: {
-		required: 'Poxa, me diga seu sobrenome por favor',
-	},
-	state: {
-		required: 'Vamos lá, só faltam mais alguns dados. Me diga seu estado'
-	},
-	city: {
-		required: ''
-	}
-};
-
-let schema = yup.object().shape({
-	firstName: yup.string().required(errorMessages.firstName.required),
-	lastName: yup.string().required(errorMessages.lastName.required),
-	state: yup.string().required(),
-	city: yup.string().required(),
-	birthDate: yup.date(),
-	email: yup.string().email(),
-	rating: yup.number().min(1).max(5),
-});
-
-const properties = Object.keys(initialValues);
+import { initialChat, initialValues, properties, robot, schema } from '../defaults';
 
 const Form = () => {
 	const [lastErrorMessage, setLastErrorMessage] = useState();
 	const [step, setStep] = useState(0);
-	const [messageList, setMessageList] = useState([
-		{
-			sender: 'Robot',
-			text: 'Olá, eu sou o Robô, qual seu nome?',
-		},
-	]);
+	const [messageList, setMessageList] = useState(initialChat);
 
 	const formik = useFormik({
 		initialValues: initialValues,
@@ -58,15 +16,11 @@ const Form = () => {
 		},
 	});
 
-	const increaseStep = () => {
-		setStep(step + 1);
-	};
-
 	const pushMessage = (sending, receiving) => {
 		const tempList = [
 			...messageList,
-			{ sender: 'User', text: sending },
-			{ sender: 'Robot', text: receiving },
+			{ sender: formik.values.firstName, text: sending },
+			{ sender: robot, text: receiving },
 		];
 		setMessageList(tempList);
 	};
@@ -77,7 +31,7 @@ const Form = () => {
 			.validateAt(properties[step], formik.values)
 			.then(() => {
 				pushMessage(sending, 'E qual seu sobrenome?');
-				increaseStep();
+				setStep(step + 1);
 			})
 			.catch((err) => {
 				if (lastErrorMessage !== err.message) {

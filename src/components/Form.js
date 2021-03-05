@@ -9,6 +9,18 @@ import {
 	robot,
 	schema,
 } from '../defaults';
+import Header from './Header';
+
+const styles = {
+	Form: {
+		
+		minHeight: '100vh',
+		backgroundColor: '#19DFA5',
+		display: 'flex',
+		flexDirection: 'column',
+
+	},
+};
 
 const Form = () => {
 	const [lastErrorMessage, setLastErrorMessage] = useState();
@@ -50,14 +62,11 @@ const Form = () => {
 
 	return (
 		<form
-			style={{
-				backgroundColor: '#19DFA5',
-				display: 'flex',
-				flexDirection: 'column',
-			}}
+			style={styles.Form}
 			onSubmit={(e) => {
 				e.preventDefault();
 			}}>
+			<Header />
 			<Chat messageList={messageList} />
 			<UserInput
 				properties={properties}

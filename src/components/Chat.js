@@ -2,7 +2,9 @@ import Message from './Message';
 
 const styles = {
 	chat: {
-		padding: 20,
+		padding: '12%',
+		paddingTop: 100,
+		paddingBottom: 10,
 		display: 'flex',
 		flexDirection: 'column',
 	},

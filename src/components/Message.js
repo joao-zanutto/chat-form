@@ -1,30 +1,29 @@
 import React from 'react';
 import { robot } from '../defaults';
 
+export const baloon = {
+	backgroundColor: 'white',
+	padding: 10,
+	margin: 15,
+	borderRadius: 30,
+	maxWidth: 800,
+	minWidth: 300,
+	boxShadow: '1px 5px 10px #9E9E9E',
+};
+
 const styles = {
+	baloon: baloon,
 	robotBaloon: {
-		backgroundColor: 'white',
-		padding: 10,
+		...baloon,
 		paddingLeft: 30,
-		margin: 15,
-		borderRadius: 30,
 		borderTopLeftRadius: 0,
-		maxWidth: 800,
-		minWidth: 300,
-		boxShadow: '1px 3px 1px #9E9E9E',
 	},
 	userBaloon: {
-		backgroundColor: 'white',
-		padding: 10,
+		...baloon,
 		paddingRight: 30,
-		margin: 15,
-		borderRadius: 30,
 		borderTopRightRadius: 0,
-		minWidth: 300,
-		maxWidth: 800,
 		float: 'right',
 		textAlign: 'right',
-		boxShadow: '1px 3px 1px #9E9E9E',
 	},
 	header: {
 		marginTop: 5,
@@ -34,13 +33,15 @@ const styles = {
 
 const Message = ({ message }) => {
 	return (
-		<div style={{ width: '100%' }}>
+		<div>
 			<div
 				style={
 					message.sender === robot ? styles.robotBaloon : styles.userBaloon
 				}>
-				<h4 style={styles.header}>{message.sender}</h4>
-				<span> {message.text} </span>
+				<h4 style={styles.header}>
+					{message.sender === '' ? 'Usuário' : message.sender}
+				</h4>
+				<span> {message.text === '' ? '...' : message.text} </span>
 			</div>
 		</div>
 	);

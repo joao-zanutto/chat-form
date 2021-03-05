@@ -3,18 +3,21 @@ import React from 'react';
 const styles = {
 	userBaloon: {
 		backgroundColor: 'white',
-		padding: 10,
+		padding: 20,
 		paddingRight: 30,
 		margin: 15,
+		marginRight: '12%',
 		borderRadius: 30,
 		borderTopRightRadius: 0,
-		width: 300,
+		width: '60%',
 		float: 'right',
-		textAlign: 'right',
-		boxShadow: '1px 3px 1px #9E9E9E',
+		textAlign: 'left',
+		boxShadow: '-1px 5px 10px #9E9E9E',
 	},
 	input: {
 		width: '100%',
+		border: '0px',
+		outline: 'none',
 	},
 };
 

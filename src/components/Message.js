@@ -26,8 +26,12 @@ const styles = {
 		textAlign: 'right',
 	},
 	header: {
+		fontFamily: 'Roboto',
+		textShadow: '0px 0.1px 1px',
 		marginTop: 5,
 		marginBottom: 10,
+		color: '#212121',
+		fontSize: '20px'
 	},
 };
 
@@ -41,7 +45,10 @@ const Message = ({ message }) => {
 				<h4 style={styles.header}>
 					{message.sender === '' ? 'Usuário' : message.sender}
 				</h4>
-				<span> {message.text === '' ? '...' : message.text} </span>
+				<p style={{ fontFamily: 'Roboto', color: '#666666', fontSize: '18px' }}>
+					{' '}
+					{message.text === '' ? '...' : message.text}{' '}
+				</p>
 			</div>
 		</div>
 	);

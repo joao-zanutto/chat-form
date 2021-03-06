@@ -3,7 +3,7 @@ import { robot } from '../defaults';
 
 const styles = {
 	Header: {
-		backgroundColor: '#BA7119',
+		backgroundColor: '#4CAF50',
 		display: 'flex',
 		padding: 20,
 		boxShadow: '0px 5px 6px grey',
@@ -11,11 +11,15 @@ const styles = {
 		width: '100%',
 	},
 	Image: {
+		boxShadow: '0px 1px 6px grey',
 		height: 50,
 		width: 50,
 		borderRadius: 50,
 	},
 	Contact: {
+		fontFamily: 'Roboto',
+		color: 'white',
+		textShadow: '0px 1px 1px',
 		padding: 10,
 		marginLeft: 20,
 	},

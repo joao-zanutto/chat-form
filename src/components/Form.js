@@ -13,12 +13,10 @@ import Header from './Header';
 
 const styles = {
 	Form: {
-		
 		minHeight: '100vh',
-		backgroundColor: '#19DFA5',
+		backgroundColor: '#DCEDC8',
 		display: 'flex',
 		flexDirection: 'column',
-
 	},
 };
 

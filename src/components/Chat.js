@@ -4,7 +4,7 @@ const styles = {
 	chat: {
 		padding: '12%',
 		paddingTop: 100,
-		paddingBottom: 10,
+		paddingBottom: 100,
 		display: 'flex',
 		flexDirection: 'column',
 	},

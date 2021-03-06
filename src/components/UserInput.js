@@ -1,7 +1,14 @@
 import React from 'react';
 
 const styles = {
-	userBaloon: {
+	inputFooter: {
+		width: '100%',
+		position: 'fixed',
+		bottom: 0,
+		backgroundColor: '#4CAF50',
+		boxShadow: '0px -1px 6px #111111',
+	},
+	inputBaloon: {
 		backgroundColor: 'white',
 		padding: 20,
 		paddingRight: 30,
@@ -12,19 +19,21 @@ const styles = {
 		width: '60%',
 		float: 'right',
 		textAlign: 'left',
-		boxShadow: '-1px 5px 10px #9E9E9E',
+		boxShadow: '-1px 2px 5px #111111',
 	},
 	input: {
 		width: '100%',
 		border: '0px',
 		outline: 'none',
+		fontFamily: 'Roboto',
+		fontSize: '18px',
 	},
 };
 
 const UserInput = ({ properties, step, handleChange, values, send }) => {
 	return (
-		<div style={{ width: '100%' }}>
-			<div style={styles.userBaloon}>
+		<div style={styles.inputFooter}>
+			<div style={styles.inputBaloon}>
 				<input
 					style={styles.input}
 					autoComplete='off'

@@ -1,4 +1,5 @@
 import React from 'react';
+import RateForm from './RateForm';
 
 const styles = {
 	inputFooter: {
@@ -28,23 +29,54 @@ const styles = {
 		fontFamily: 'Roboto',
 		fontSize: '18px',
 	},
+	button: {
+		width: '100%',
+		padding: '7px',
+		borderRadius: '25px',
+		border: '0px',
+		outline: 'none',
+		fontFamily: 'Roboto',
+		fontSize: '25px',
+		backgroundColor: 'white',
+		color: 'black',
+		fontWeight: 'bold',
+		textShadow: '0px 0.3px 2px black',
+		boxShadow: '0px 0px 20px grey',
+	},
 };
 
-const UserInput = ({ properties, step, handleChange, values, send }) => {
+const UserInput = ({
+	properties,
+	step,
+	handleChange,
+	values,
+	send,
+	submitRating,
+	handleSubmit,
+}) => {
 	return (
 		<div style={styles.inputFooter}>
 			<div style={styles.inputBaloon}>
-				<input
-					style={styles.input}
-					autoComplete='off'
-					id={properties[step]}
-					name={properties[step]}
-					type={properties[step] === 'birthDate' ? 'date' : 'text'}
-					onChange={handleChange}
-					value={values[properties[step]]}
-					onKeyPress={(e) => (e.key === 'Enter' ? send(step) : null)}
-					placeholder="Pressione 'Enter' para enviar"
-				/>
+				{step < 6 ? (
+					<input
+						style={styles.input}
+						autoComplete='off'
+						id={properties[step]}
+						name={properties[step]}
+						type={properties[step] === 'birthDate' ? 'date' : 'text'}
+						onChange={handleChange}
+						value={values[properties[step]]}
+						onKeyPress={(e) => (e.key === 'Enter' ? send(step) : null)}
+						placeholder="Pressione 'Enter' para enviar"
+					/>
+				) : step < 7 ? (
+					<RateForm submitRating={submitRating} />
+				) : step < 8 ? (
+					<button style={styles.button} onClick={handleSubmit}>
+						{' '}
+						Enviar{' '}
+					</button>
+				) : null}
 			</div>
 		</div>
 	);

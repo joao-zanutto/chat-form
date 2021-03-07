@@ -30,4 +30,8 @@ A aplicação é formada pela seguinte estrutura de componentes
     - User Input > componente que recebe um estado com o passo corrente e os "campos" do formulário
       - inputs        para serem atualizados conforme o usuário vai interagindo com a aplicação;
       - RateForm > componente com estrelas que retorna o valor para o User Input de acordo com o clique do usuário
+
+
+- defaults > possui os valores defaults para os intial values do form e outras variáveis usadas por todo código (como o robot)
+- messages > possui as mensagens do robô, tanto de fluxo do formulário, quanto de erro que são usadas na validação das entradas
 ```

@@ -20,6 +20,8 @@ Essa é uma aplicação desenvolvida em ReactJS com a ultilização de apenas 3 
 A aplicação é formada pela seguinte estrutura de componentes
 
 ```
+- defaults > possui os valores defaults para os intial values do form e outras variáveis usadas por todo código (como o robot)
+- messages > possui as mensagens do robô, tanto de fluxo do formulário, quanto de erro que são usadas na validação das entradas
 - App > contém o form
   - Form > contém os dados, os componentes funcionais e distribui os dados e funções de alteração de estado entre eles
     - Header > componente visual que mocka o header de uma aplicação de chat
@@ -31,7 +33,4 @@ A aplicação é formada pela seguinte estrutura de componentes
       - inputs        para serem atualizados conforme o usuário vai interagindo com a aplicação;
       - RateForm > componente com estrelas que retorna o valor para o User Input de acordo com o clique do usuário
 
-
-- defaults > possui os valores defaults para os intial values do form e outras variáveis usadas por todo código (como o robot)
-- messages > possui as mensagens do robô, tanto de fluxo do formulário, quanto de erro que são usadas na validação das entradas
 ```

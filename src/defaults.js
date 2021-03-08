@@ -17,6 +17,6 @@ export const initialChat = [
 		text:
 			'Olá, eu sou o ' +
 			robot +
-			' e estou aqui para te ajudar a realizar o cadastra na super empresa! Primeiramente, qual o seu nome?',
+			' e estou aqui para te ajudar a realizar o cadastro na Super Empresa! Primeiramente, qual o seu nome?',
 	},
 ];

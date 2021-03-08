@@ -21,15 +21,16 @@ const styles = {
 		float: 'right',
 		textAlign: 'left',
 		boxShadow: '-1px 2px 5px #111111',
+		display: 'flex',
 	},
 	input: {
 		width: '100%',
 		border: '0px',
 		outline: 'none',
 		fontFamily: 'Roboto',
-		fontSize: '18px',
+		fontSize: '16px',
 	},
-	button: {
+	saveButton: {
 		width: '100%',
 		padding: '7px',
 		borderRadius: '25px',
@@ -42,6 +43,9 @@ const styles = {
 		fontWeight: 'bold',
 		textShadow: '0px 0.3px 2px black',
 		boxShadow: '0px 0px 20px grey',
+	},
+	sendButton: {
+		color: 'black',
 	},
 };
 
@@ -72,11 +76,15 @@ const UserInput = ({
 				) : step < 7 ? (
 					<RateForm submitRating={submitRating} />
 				) : step < 8 ? (
-					<button style={styles.button} onClick={handleSubmit}>
+					<button style={styles.saveButton} onClick={handleSubmit}>
 						{' '}
-						Enviar{' '}
+						Salvar{' '}
 					</button>
 				) : null}
+				<i
+					style={styles.sendButton}
+					class='fa fa-send'
+					onClick={() => send(step)}></i>
 			</div>
 		</div>
 	);

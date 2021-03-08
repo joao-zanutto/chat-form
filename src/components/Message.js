@@ -45,7 +45,7 @@ const Message = ({ message }) => {
 				<h4 style={styles.header}>
 					{message.sender === '' ? 'Usuário' : message.sender}
 				</h4>
-				<p style={{ fontFamily: 'Roboto', color: '#666666', fontSize: '18px' }}>
+				<p style={{ fontFamily: 'Roboto', color: '#666666', fontSize: '16px' }}>
 					{' '}
 					{message.text === '' ? '...' : message.text}{' '}
 				</p>

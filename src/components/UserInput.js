@@ -25,8 +25,8 @@ const styles = {
 	},
 	input: {
 		width: '100%',
-		border: '0px',
 		outline: 'none',
+		border: '0',
 		fontFamily: 'Roboto',
 		fontSize: '16px',
 	},
@@ -46,6 +46,8 @@ const styles = {
 	},
 	sendButton: {
 		color: 'black',
+		padding: 7,
+		paddingLeft: 15,
 	},
 };
 

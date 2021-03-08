@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/chat-form/static/js/main.6b429858.chunk.js",
+    "main.js.map": "/chat-form/static/js/main.6b429858.chunk.js.map",
+    "runtime-main.js": "/chat-form/static/js/runtime-main.b1ee2fee.js",
+    "runtime-main.js.map": "/chat-form/static/js/runtime-main.b1ee2fee.js.map",
+    "static/js/2.601cc66e.chunk.js": "/chat-form/static/js/2.601cc66e.chunk.js",
+    "static/js/2.601cc66e.chunk.js.map": "/chat-form/static/js/2.601cc66e.chunk.js.map",
+    "index.html": "/chat-form/index.html",
+    "static/js/2.601cc66e.chunk.js.LICENSE.txt": "/chat-form/static/js/2.601cc66e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1ee2fee.js",
+    "static/js/2.601cc66e.chunk.js",
+    "static/js/main.6b429858.chunk.js"
+  ]
+}

@@ -34,3 +34,9 @@ A aplicação é formada pela seguinte estrutura de componentes
       - RateForm > componente com estrelas que retorna o valor para o User Input de acordo com o clique do usuário
 
 ```
+
+## API
+
+A construção da API mockada utilizada na aplicação é encontrada na URL `https://6043744aa20ace001728e18b.mockapi.io/` e foi criado tratamento para a rota de `/users`.
+
+Para acessar a lista de todos os usuários basta entrar na URL (ou realizar uma requisição GET) `https://6043744aa20ace001728e18b.mockapi.io/users/`

@@ -3,11 +3,11 @@ import { robot } from '../defaults';
 
 export const baloon = {
 	backgroundColor: 'white',
-	padding: 10,
+	padding: 20,
 	margin: 15,
 	borderRadius: 30,
-	maxWidth: 800,
-	minWidth: 300,
+	minWidth: 100,
+	maxWidth: 500,
 	boxShadow: '1px 5px 10px #9E9E9E',
 };
 
@@ -31,7 +31,7 @@ const styles = {
 		marginTop: 5,
 		marginBottom: 10,
 		color: '#212121',
-		fontSize: '20px'
+		fontSize: '20px',
 	},
 };
 
